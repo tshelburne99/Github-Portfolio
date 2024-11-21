@@ -1,4 +1,4 @@
-const username = "tshelburne99"; //GitHub Username
+const username = "tshelburne99"; // Replace with your GitHub username
 const projectList = document.getElementById("project-list");
 
 async function fetchGitHubProjects() {
@@ -14,7 +14,9 @@ async function fetchGitHubProjects() {
 function displayProjects(repos) {
     repos.forEach(repo => {
         const projectCard = document.createElement("div");
-        projectCard.classList.add("project-card");
+        projectCard.classList.add("project-card", "col-md-4");
+        projectCard.setAttribute("data-aos", "fade-up");
+        projectCard.setAttribute("data-aos-duration", "800");
         projectCard.innerHTML = `
             <h3>${repo.name}</h3>
             <p>${repo.description || "No description available."}</p>

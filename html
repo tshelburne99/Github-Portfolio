@@ -3,23 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tommy Shelburne | Projects</title>
+    <title>Tommy Shelburne | GitHub Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LtrjvnR4/JoqFTqY7ALDxH6zv0E6JO0lq0aKMVJszwFVR3hsE4HfE1TQZqU32hVb"
+      crossorigin="anonymous"
+    />
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- AOS (Animate on Scroll) -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Thomas Shelburne</h1>
+    <header class="animate__animated animate__fadeInDown">
+      <h1>Tommy Shelburne</h1>
       <p>Software Engineer | GitHub Portfolio</p>
     </header>
+
     <main>
       <section id="projects">
-        <h2>My GitHub Projects</h2>
-        <div id="project-list"></div>
+        <h2 data-aos="zoom-in">My GitHub Projects</h2>
+        <div id="project-list" class="row"></div>
       </section>
     </main>
+
     <footer>
       <p>&copy; 2024 Tommy Shelburne</p>
     </footer>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Popper.js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-qLddN5rGinm5iYbQnqv1jKpCtBpkPzZ9c6w1w9LLaj+yxD/FEzNXE3Ugqfa8Tc6e"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTzW3ui6wW6uoNrCGRa5DQtIOVxFjwYX3CkKtL9RPPJfW0ctIm"
+      crossorigin="anonymous"
+    ></script>
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
   </body>
 </html>

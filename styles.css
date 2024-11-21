@@ -1,3 +1,4 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -9,39 +10,84 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background: #333;
+    background: linear-gradient(45deg, #0073e6, #00d4ff);
+    background-size: 400% 400%;
     color: #fff;
+    animation: gradientBG 8s ease infinite; /* Gradient animation loops */
 }
-main {
-    padding: 20px;
+header h1, header p {
+    animation: fadeInDown 1s ease; /* Text animation plays once */
 }
+
+/* Project Section */
 #projects {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 #project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 .project-card {
     background: #fff;
-    padding: 15px;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(33.333% - 20px);
 }
 .project-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.project-card p {
+    margin-bottom: 15px;
 }
 .project-card a {
     color: #0073e6;
     text-decoration: none;
     font-weight: bold;
 }
+
+/* Gradient Background Animation */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Text Fade-in Animation */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
     background: #333;
     color: #fff;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
