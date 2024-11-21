@@ -1,93 +1,103 @@
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
 }
+
+/* Header */
 header {
+    background: linear-gradient(135deg, #003d99, #00bfff);
+    color: white;
+    padding: 50px 20px;
     text-align: center;
-    padding: 20px;
-    background: linear-gradient(45deg, #0073e6, #00d4ff);
-    background-size: 400% 400%;
-    color: #fff;
-    animation: gradientBG 8s ease infinite; /* Gradient animation loops */
 }
-header h1, header p {
-    animation: fadeInDown 1s ease; /* Text animation plays once */
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+header .subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.9;
 }
 
-/* Project Section */
+/* Projects Section */
 #projects {
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 50px 20px;
+}
+#projects h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #003d99;
 }
 #project-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 .project-card {
-    background: #fff;
+    color: white; /* Ensure text is readable on gradient backgrounds */
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    flex: 1 1 calc(33.333% - 20px);
 }
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 .project-card h3 {
     font-size: 1.5rem;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 .project-card p {
-    margin-bottom: 15px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+.project-card ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+.project-card ul li {
+    font-size: 0.8rem;
 }
 .project-card a {
-    color: #0073e6;
+    display: inline-block;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
     text-decoration: none;
-    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
-
-/* Gradient Background Animation */
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Text Fade-in Animation */
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.project-card a:hover {
+    background: black;
 }
 
 /* Footer */
 footer {
+    background: #003d99;
+    color: white;
+    padding: 20px;
     text-align: center;
-    padding: 10px;
-    background: #333;
-    color: #fff;
+    font-size: 0.9rem;
 }
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
+footer a {
+    color: #00bfff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
 }
